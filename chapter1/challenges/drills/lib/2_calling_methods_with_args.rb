@@ -7,7 +7,7 @@
 # when the string is Apple
 # it should return false
 def starts_with_the_letter_a?(string)
-  # your code goes here
+  string.start_with?("a")
 end
 
 # TASK: define a method that returns a boolean depending on whether or not a given string ends in a lowercase 'a'.
@@ -17,7 +17,7 @@ end
 # when the string is JAVA
 # the method should return false
 def ends_with_the_letter_a?(string)
-  # your code goes here
+  string.end_with?("a")
 end
 
 # TASK: define a method that returns a boolean depending on whether or not a given string contains the substring 'hello'.
@@ -27,7 +27,7 @@ end
 # when the string is 'world'
 # the method should return false
 def contains_hello?(string)
-  # your code goes here
+  string.include?("hello")
 end
 
 # TASK: define a method that returns a string that replaces the substring 'hello' with the substring 'goodbye'.
@@ -35,7 +35,7 @@ end
 # when the string is 'hello folks'
 # the method should return 'goodbye folks'
 def substitute_hello_with_goodbye(string)
-  # your code goes here
+  string.gsub("hello","goodbye")
 end
 
 # TASK: define a method that returns a string that has removed all vowels from a given string.
@@ -43,7 +43,7 @@ end
 # when the string is 'hullabaloo'
 # the method should return 'hllbl'
 def remove_all_vowels(string)
-  # your code goes here
+  string.delete("aeiou")
 end
 
 # TASK: define a method that returns a string that has removed all consonants from a given string.
@@ -51,7 +51,7 @@ end
 # when the string is 'hullabaloo'
 # the method should return 'uaaoo'
 def remove_all_consonants(string)
-  # your code goes here
+  string.delete("^aeiou")
 end
 
 # TASK: define a method that returns a string that has removed the last half of characters from a given string.
@@ -59,7 +59,9 @@ end
 # when the string is 'coding'
 # the method should return 'cod'
 def first_half(string)
-  # your code goes here
+  x = string.length/2
+  firstHalf = string[0,x]
+  return firstHalf 
 end
 
 # TASK: define a method that returns a string that has removed the first half of characters from a given string.
@@ -67,5 +69,8 @@ end
 # when the string is 'coding'
 # the method should return 'ing'
 def second_half(string)
-  # your code goes here
+  x = string.length
+  y = string.length/2
+  secondHalf = string[y,x]
+  return secondHalf
 end

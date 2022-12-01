@@ -2,7 +2,6 @@
 # - 8 or more characters
 # - include at least one of these characters: !, @, $, %, &
 
-
 def valid?(password)
     x = password.length
     if x > 7 && password.count('!@$%&') != 0
@@ -11,4 +10,3 @@ def valid?(password)
         return false
     end
 end
-
